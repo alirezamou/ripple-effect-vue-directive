@@ -1,0 +1,39 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ccc;
+}
+
+button {
+  padding: 20px 30px;
+  outline: none;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.circle {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  background-color: #ccc;
+  animation-name: ripple;
+  animation-duration: 0.6s;
+  animation-iteration-count: infinite;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes ripple {
+  from {
+    padding: 0;
+  }
+  to {
+    padding: 110%;
+    opacity: 0;
+  }
+}
