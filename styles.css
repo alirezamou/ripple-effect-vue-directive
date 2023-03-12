@@ -37,3 +37,9 @@ button {
     opacity: 0;
   }
 }
+
+.some-container {
+  height: 100px;
+  width: 100px;
+  background-color: rgba(100, 180, 240, 1);
+}

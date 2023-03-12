@@ -16,6 +16,7 @@
       <button v-ripple>button 4</button>
       <button v-ripple>button 5</button>
       <button v-ripple>button 6</button>
+      <div v-ripple class="some-container"></div>
     </div>
     <script>
       const { createApp } = Vue;
@@ -29,11 +30,11 @@
             const x = e.pageX;
             const y = e.pageY;
 
-            const buttonTop = e.target.offsetTop;
-            const buttonLeft = e.target.offsetLeft;
+            const edgeTop = e.target.offsetTop;
+            const edgeLeft = e.target.offsetLeft;
 
-            const xInside = x - buttonLeft;
-            const yInside = y - buttonTop;
+            const xInside = x - edgeLeft;
+            const yInside = y - edgeTop;
             const circle = document.createElement("span");
 
             circle.classList.add("circle");
